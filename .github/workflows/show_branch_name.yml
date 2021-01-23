@@ -9,5 +9,6 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - uses: nelonoel/branch-name@v1.0.1
-      - run: echo ${GITHUB_CONTEXT}
+      - run: echo ${GITHUB_HEAD_REF}
+      - run: echo ${GITHUB_BASE_REF}
+      - run: echo ${GITHUB_REF}
