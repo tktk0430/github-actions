@@ -11,5 +11,7 @@ jobs:
     steps:
       - uses: mdecoleman/pr-branch-name@1.0.0
         id: vars
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo ${{ steps.vars.outputs.branch }}
 
