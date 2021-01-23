@@ -9,4 +9,5 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${GITHUB_REF##*/}
+      - uses: nelonoel/branch-name@v1.0.1
+      - run: echo ${BRANCH_NAME}
