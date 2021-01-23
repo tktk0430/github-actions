@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  say_hello:
+  echo:
     runs-on: ubuntu-latest
     steps:
       - uses: nelonoel/branch-name@v1.0.1
-      - run: echo ${BRANCH_NAME}
+      - run: echo ${GITHUB_REF}
