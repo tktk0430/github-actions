@@ -8,6 +8,7 @@ on:
 jobs:
   echo:
     runs-on: ubuntu-latest
+    id: vars
     steps:
       - uses: mdecoleman/pr-branch-name@1.0.0
       - run: echo ${{ steps.vars.outputs.branch }}
