@@ -11,11 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout repository
-      - name: Extract branch name
-        uses: mdecoleman/pr-branch-name@1.0.0
-        id: extract_branch
-        with:
-          repo-token: ${{ secrets.ACCESS_TOKEN }}
       - name: shoing branch name
-        run: echo ${{ steps.extract_branch.outputs.branch }}
+        run: echo ${{ github.payload.pull_request.head.ref }}
 
