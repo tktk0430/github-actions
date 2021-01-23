@@ -9,9 +9,13 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - uses: mdecoleman/pr-branch-name@1.0.0
-        id: vars
+      - uses: actions/checkout@v2
+        name: Checkout repository
+      - name: Extract branch name
+        uses: mdecoleman/pr-branch-name@1.0.0
+        id: extract_branch
         with:
           repo-token: ${{ secrets.ACCESS_TOKEN }}
-      - run: echo ${{ steps.vars.outputs.branch }}
+      - name: shoing branch name
+        run: echo ${{ steps.extract_branch.outputs.branch }}
 
