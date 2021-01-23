@@ -9,8 +9,9 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: Checkout repository
-      - name: shoing branch name
-        run: echo ${{ github.payload.pull_request.head.ref }}
+    - uses: mdecoleman/pr-branch-name@1.0.0
+      id: vars
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - run: echo ${{ steps.vars.outputs.branch }}
 
