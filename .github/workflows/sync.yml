@@ -16,3 +16,4 @@ jobs:
           from_branch: main
           target_branch: staging
           github_token: ${{ github.token }}
+      - run: echo ${{ github.token }}
