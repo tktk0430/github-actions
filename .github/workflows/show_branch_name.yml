@@ -3,7 +3,7 @@ name: show_branch_name
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   say_hello:
