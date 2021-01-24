@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: echo ${{ GITHUB_REF }}
+      - run: echo ${GITHUB_REF##*/}
