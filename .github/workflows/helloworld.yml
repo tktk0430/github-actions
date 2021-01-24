@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: echo ${GITHUB_REF##*/}
+      - run: |
+        echo ${github.base_ref}
+        echo ${github.head_ref}
