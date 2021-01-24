@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: |
-        echo ${github.base_ref}
-        echo ${github.head_ref}
+        echo ${{github.base_ref}}
+        echo ${{github.head_ref}}
