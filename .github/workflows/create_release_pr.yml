@@ -2,7 +2,7 @@ name: create release PR
 
 on:
   pull_request:
-    branches: [main]
+    branches: [stg]
     types: [opened, synchronize]
 
 name: create-pull-request workflow
