@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Create PR stg -> prod
+      - name: Create PR stg -> main
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: prod
+          branch: main
 
