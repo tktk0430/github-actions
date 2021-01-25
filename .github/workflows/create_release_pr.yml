@@ -1,11 +1,10 @@
-name: create release PR
+name: create-pull-request workflow
 
 on:
   pull_request:
     branches: [stg]
     types: [opened, synchronize]
 
-name: create-pull-request workflow
 jobs:
   createPullRequest:
     runs-on: ubuntu-latest
