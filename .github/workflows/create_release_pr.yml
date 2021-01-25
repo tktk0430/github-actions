@@ -1,0 +1,14 @@
+name: create release PR
+
+on: 
+  push:
+    branches: [stg]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create PR stg -> prod
+        uses: peter-evans/create-pull-request@v3
+
